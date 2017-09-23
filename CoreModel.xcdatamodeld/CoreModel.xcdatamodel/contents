@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D30" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Blog" representedClassName="Blog" syncable="YES" codeGenerationType="class">
+        <attribute name="blog_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="likes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagNames" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Friend" representedClassName="Friend" syncable="YES" codeGenerationType="class">
+        <attribute name="friend_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="friendName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fri_Blog_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blog" syncable="YES"/>
+    </entity>
+    <entity name="ProfileData" representedClassName="ProfileData" syncable="YES" codeGenerationType="class">
+        <attribute name="emailId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <relationship name="my_Blog_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blog" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ProfileData" positionX="-270" positionY="-48" width="128" height="118"/>
+        <element name="Blog" positionX="-126" positionY="-180" width="128" height="118"/>
+        <element name="Friend" positionX="-11" positionY="-27" width="128" height="90"/>
+    </elements>
+</model>
